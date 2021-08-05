@@ -7,6 +7,9 @@ module.exports = {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },
+      margin: {
+        "-200": "-34.8rem",
+      },
     },
   },
   variants: {

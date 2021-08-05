@@ -7,8 +7,10 @@ import ExploreData from "../public/Assets/explore.json";
 import liveAnywhere from "../public/Assets/liveAnywhere.json";
 import LargeCard from "../components/LargeCard";
 import Footer from "../components/Footer";
+import React, { useState } from "react";
 
 export default function Home({ exploreData, liveAnywhereData }) {
+  const [searchInput, setSearchInput] = useState("");
   return (
     <div className="">
       <Head>
@@ -20,8 +22,8 @@ export default function Home({ exploreData, liveAnywhereData }) {
         ></link>
       </Head>
 
-      <Header />
-      <Banner />
+      <Header searchInput={searchInput} setSearchInput={setSearchInput} />
+      <Banner searchInput={searchInput} />
 
       <main className="font-inter max-w-7xl mx-auto px-8 md:px-16">
         <section className="pt-10">
