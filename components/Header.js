@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   GlobeAltIcon,
@@ -10,11 +10,14 @@ import {
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
+import { useRouter } from "next/dist/client/router";
 
-function Header({ searchInput, setSearchInput }) {
+function Header({ searchInput, setSearchInput, placeholder }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [numberOfGuest, setNumGuest] = useState(1);
+
+  const router = useRouter();
 
   const selectionRange = {
     startDate: startDate,
@@ -31,6 +34,20 @@ function Header({ searchInput, setSearchInput }) {
     setSearchInput("");
   };
 
+  const search = () => {
+    router.push({
+      pathname: "/search",
+      query: {
+        location: searchInput,
+        startDate: startDate.toISOString(),
+        endDate: endDate.toISOString(),
+        numberOfGuest,
+      },
+    });
+
+    resetInput();
+  };
+
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 backdrop-blur-3xl shadow-md py-3 px-2 md:px-10 ">
       {/* LEFT */}
@@ -41,6 +58,7 @@ function Header({ searchInput, setSearchInput }) {
           layout="fill"
           objectFit="contain"
           objectPosition="left"
+          onClick={() => router.push("/")}
         />
       </div>
 
@@ -48,7 +66,7 @@ function Header({ searchInput, setSearchInput }) {
       <div className="flex items-center md:border-2 rounded-full md:shadow-md border-gray-400">
         <input
           type="text"
-          placeholder="Search here"
+          placeholder={placeholder || "Search here"}
           value={searchInput}
           autoComplete="off"
           onChange={(e) => setSearchInput(e.target.value)}
@@ -103,7 +121,10 @@ function Header({ searchInput, setSearchInput }) {
             >
               Cancel
             </button>
-            <button className="flex-grow rounded-full  bg-red-400 p-2 ml-6 hover:bg-red-500 text-white hover:font-semibold">
+            <button
+              className="flex-grow rounded-full  bg-red-400 p-2 ml-6 hover:bg-red-500 text-white hover:font-semibold"
+              onClick={search}
+            >
               Search
             </button>
           </div>
