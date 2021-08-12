@@ -17,7 +17,6 @@ function Search({ searchData }) {
   const formattedEndDate = format(new Date(endDate), "dd MMMM yy");
 
   const range = `${formattedStartDate} - ${formattedEndDate}`;
-  console.log(searchData);
 
   return (
     <div className="h-screen font-inter">
@@ -42,12 +41,13 @@ function Search({ searchData }) {
           <p className="filter-button">More Filters</p>
         </div>
 
-
         <div className="flex flex-col">
           {searchData.map((item, index) => (
             <InfoCard
               key={index}
               img={item.img}
+              city={location}
+              numberOfGuest={numberOfGuest}
               location={item.location}
               title={item.title}
               description={item.description}
