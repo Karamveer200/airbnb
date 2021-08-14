@@ -63,24 +63,22 @@ function Header({ searchInput, setSearchInput, placeholder }) {
       </div>
 
       {/* Middle */}
-      <div className="flex items-center md:border-2 rounded-full md:shadow-md border-gray-400">
+      <div className="flex items-center border-2 rounded-full md:shadow-md border-gray-400">
         <input
           type="text"
           placeholder={placeholder || "Search here"}
           value={searchInput}
           autoComplete="off"
           onChange={(e) => setSearchInput(e.target.value)}
-          className="pl-5 h-8 text-gray-600 font-semibold md:focus:bg-white rounded-full ml-1 outline-none flex-grow mr-2 pr-5 bg-transparent"
+          className="pl-5 h-8 w-full focus:text-gray-600 font-semibold focus:bg-white text-white rounded-full ml-1 outline-none flex-grow mr-2 pr-2 bg-transparent"
         />
         <SearchIcon className="hidden lg:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2" />
       </div>
 
       {/* Right */}
       <div className="flex space-x-4 items-center justify-end text-gray-600 font-inter">
-        <div className="flex space-x-4 items-center bg-white px-4 py-2 rounded-full border-2 border-gray-600">
-          <p className="hidden md:inline-flex text-sm lg:text-base">
-            Become a Host
-          </p>
+        <div className="hidden md:flex space-x-4 items-center bg-white px-4 py-2 rounded-full border-2 border-gray-600">
+          <p className=" md:text-xs lg:text-base">Become a Host</p>
           <GlobeAltIcon className="h-6" />
         </div>
 

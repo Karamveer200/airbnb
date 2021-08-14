@@ -7,8 +7,8 @@
     "star": 4.73,
     "price": "£30 / night",
     "total": "£117 total",
-    "long": -0.0022275,
-    "lat": 51.5421655
+    "long": -122.94913,
+    "lat": 50.158817
   },
   {
     "img": "https://links.papareact.com/hz2",
@@ -18,8 +18,8 @@
     "star": 4.3,
     "price": "£40 / night",
     "total": "£157 total",
-    "long": -0.095091,
-    "lat": 51.48695
+    "long": -122.958923,
+    "lat": 50.138817
   },
   {
     "img": "https://links.papareact.com/uz7",
@@ -29,8 +29,8 @@
     "star": 3.8,
     "price": "£35 / night",
     "total": "£207 total",
-    "long": -0.135638,
-    "lat": 51.521916
+    "long": -122.957964,
+    "lat": 50.118817
   },
   {
     "img": "https://links.papareact.com/6as",
@@ -40,8 +40,8 @@
     "star": 4.1,
     "price": "£55 / night",
     "total": "£320 total",
-    "long": -0.069961,
-    "lat": 51.472618
+    "long": -122.953982,
+    "lat": 50.1188817
   },
   {
     "img": "https://links.papareact.com/xhc",
@@ -51,8 +51,8 @@
     "star": 5.0,
     "price": "£60 / night",
     "total": "£450 total",
-    "long": -0.08472,
-    "lat": 51.510794
+    "long": -122.95441,
+    "lat": 50.1247817
   },
   {
     "img": "https://links.papareact.com/pro",
@@ -62,8 +62,8 @@
     "star": 4.23,
     "price": "£65 / night",
     "total": "£480 total",
-    "long": -0.094116,
-    "lat": 51.51401
+    "long": -122.934969,
+    "lat": 50.1252817
   },
   {
     "img": "https://links.papareact.com/8w2",
@@ -73,7 +73,7 @@
     "star": 3.85,
     "price": "£90 / night",
     "total": "£650 total",
-    "long": -0.109889,
-    "lat": 51.521245
+    "long": -122.94933,
+    "lat": 50.1318817
   }
 ]
